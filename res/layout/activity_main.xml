@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="#3366CC"
+    tools:context=".MainActivity" 				
+    >
+    
+    
+     
+    <TextView 
+        android:id="@+id/relativeTextviewTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioButtonGroup"
+        
+		android:textColor="#333399"
+        android:text="Select an OS below"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <RadioGroup 
+        android:id="@+id/radioButtonGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeTextview"
+        >
+         <RadioButton android:id="@+id/linuxRadioButton" 
+           			android:layout_height="wrap_content" 
+             		android:layout_width="wrap_content"
+             		android:text="Linux distro." />
+        <RadioButton android:id="@+id/windowsRadioButton" 
+            		android:layout_height="wrap_content" 
+             		android:layout_width="wrap_content"
+            		android:text="Windows" />
+        <RadioButton android:id="@+id/macRadioButton" 
+            		android:layout_height="wrap_content" 
+             		android:layout_width="wrap_content"
+            		android:text="Mac OS" />
+        <RadioButton android:id="@+id/otherOSRadioButton"
+            		android:layout_height="wrap_content" 
+             		android:layout_width="wrap_content"
+            		android:text="Other OS"/>       
+    </RadioGroup>
+    
+    
+    
+
+<EditText
+        android:id="@+id/editText2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:textColor="#333399"
+        
+        android:ems="10"        
+         android:inputType="textPersonName" /> 
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_below="@+id/editText2"
+        android:textColor="#333399"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/editText1"
+        android:text="@string/label_Name"
+        android:textColor="#333399"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:textColor="#333399"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText2"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignLeft="@+id/textView2"
+        android:text="Note"
+        android:textColor="#333399"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editText3"
+        android:textColor="#333399"
+        android:text="@string/buttonText_send" />
+
+<TextView
+        android:id="@+id/rateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"        
+        android:text="Please rate how ugly this app is."
+        android:textColor="#333399"
+    />
+    
+    <RatingBar
+        android:id="@+id/rateBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rateTextView"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="5.0" />
+    <TextView 
+        android:id="@+id/relativeTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+		android:textColor="#333399"
+        android:text="By Joseph Ortiz"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+
+</RelativeLayout>
